@@ -1,8 +1,8 @@
 {
-    "coin": "recoal",
+    "coin": "Recoal",
     "symbol": "RECL",
-    "coinUnits": 1000000000000,
-    "coinDifficultyTarget": 10,
+    "coinUnits": 1000000000,
+    "coinDifficultyTarget": 240,
     "cnVariant": null,
 
     "logging": {
@@ -20,7 +20,7 @@
     "poolServer": {
         "enabled": true,
         "clusterForks": "auto",
-        "poolAddress": "GBqRuitSoU3PFPBAkXMEnLdBRWXH4iDSD6RDxnQiEFjVJhWUi1UuqfV5EzosmaXgpPGE6JJQjMYhZZgWY8EJQn8jQTsuTit",
+        "poolAddress": "",
         "blockRefreshInterval": 1000,
         "minerTimeout": 900,
         "sslCert": "./cert.pem",
@@ -94,14 +94,14 @@
         "enabled": true,
         "interval": 300,
         "maxAddresses": 50,
-        "mixin": 5,
+        "mixin": 12,
         "priority": 0,
-        "transferFee": 14000000000,
+        "transferFee": 1000,
         "dynamicTransferFee": true,
         "minerPayFee" : true,
-        "minPayment": 1000000000000,
+        "minPayment": 10000000000,
         "maxTransactionAmount": 0,
-        "denomination": 100000000000
+        "denomination": 10000000
     },
 
     "blockUnlocker": {
@@ -184,7 +184,7 @@
     },
 
     "prices": {
-        "source": "cryptonator",
+        "source": "tradeogre",
         "currency": "USD"
     },
     
