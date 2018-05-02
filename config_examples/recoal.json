@@ -20,7 +20,7 @@
     "poolServer": {
         "enabled": true,
         "clusterForks": "auto",
-        "poolAddress": "",
+        "poolAddress": "co9HbwcrofL2tVTXZDvFzMCY7ZXDKfUWWc41cc7idmKgjSJRkXzcqKEQEkaTsp84GL3a18hFFcQ4a7quNgFoKZ762ST4RggNy",
         "blockRefreshInterval": 1000,
         "minerTimeout": 900,
         "sslCert": "./cert.pem",
@@ -135,7 +135,7 @@
 
     "wallet": {
         "host": "127.0.0.1",
-        "port": 12122
+        "port": 12123
     },
 
     "redis": {
