@@ -104,6 +104,7 @@ Usage
 
 #### Requirements
 * Coin daemon(s) (find the coin's repo and build latest version from source)
+  * [ReCoal](https://github.com/ReCoal/recoal)
   * [ByteCoin](https://github.com/amjuarez/bytecoin)
   * [Monero](https://github.com/monero-project/bitmonero)
   * [GRAFT](https://github.com/graft-project/GraftNetwork)
@@ -131,7 +132,7 @@ you are using - a good place to start with redis is [data persistence](http://re
 Clone the repository and run `npm update` for all the dependencies to be installed:
 
 ```bash
-git clone https://github.com/dvandal/cryptonote-nodejs-pool.git pool
+git clone https://github.com/ReCoal/recoal-pool.git pool
 cd pool
 
 npm update
@@ -143,13 +144,13 @@ npm update
 
 Copy the `config_examples/COIN.json` file of your choice to `config.json` then overview each options and change any to match your preferred setup.
 
-Explanation for each field:
+Example Configuration :
 ```javascript
 {
-    "coin": "Recoal",
+    "coin": "recoal",
     "symbol": "RECL",
-    "coinUnits": 1000000000,
-    "coinDifficultyTarget": 240,
+    "coinUnits": 1000000000000,
+    "coinDifficultyTarget": 120,
     "cnVariant": null,
 
     "logging": {
@@ -167,7 +168,7 @@ Explanation for each field:
     "poolServer": {
         "enabled": true,
         "clusterForks": "auto",
-        "poolAddress": "",
+        "poolAddress": "__________________________YOUR_POOL_ADDRESS____________________________",
         "blockRefreshInterval": 1000,
         "minerTimeout": 900,
         "sslCert": "./cert.pem",
@@ -241,14 +242,14 @@ Explanation for each field:
         "enabled": true,
         "interval": 300,
         "maxAddresses": 50,
-        "mixin": 12,
+        "mixin": 5,
         "priority": 0,
-        "transferFee": 1000,
+        "transferFee": 14000000000,
         "dynamicTransferFee": true,
         "minerPayFee" : true,
-        "minPayment": 10000000000,
+        "minPayment": 1000000000000,
         "maxTransactionAmount": 0,
-        "denomination": 10000000
+        "denomination": 100000000000
     },
 
     "blockUnlocker": {
@@ -282,7 +283,7 @@ Explanation for each field:
 
     "wallet": {
         "host": "127.0.0.1",
-        "port": 12122
+        "port": 12123
     },
 
     "redis": {
@@ -331,7 +332,7 @@ Explanation for each field:
     },
 
     "prices": {
-        "source": "tradeogre",
+        "source": "cryptonator",
         "currency": "USD"
     },
     
@@ -538,7 +539,7 @@ Documentation for JSON-RPC commands can be found here:
 Curl can be used to use the JSON-RPC commands from command-line. Here is an example of calling `getblockheaderbyheight` for block 100:
 
 ```bash
-curl 127.0.0.1:18081/json_rpc -d '{"method":"getblockheaderbyheight","params":{"height":100}}'
+curl 127.0.0.1:12121/json_rpc -d '{"method":"getblockheaderbyheight","params":{"height":100}}'
 ```
 
 
@@ -551,16 +552,16 @@ curl 127.0.0.1:18081/json_rpc -d '{"method":"getblockheaderbyheight","params":{"
 
 Donations
 ---------
-* BTC: `17XRyHm2gWAj2yfbyQgqxm25JGhvjYmQjm`
-* ETH: `0x83ECF65934690D132663F10a2088a550cA201353`
-* LTC: `LS9To9u2C95VPHKauRMEN5BLatC8C1k4F1`
-* XMR: `49WyMy9Q351C59dT913ieEgqWjaN12dWM5aYqJxSTZCZZj1La5twZtC3DyfUsmVD3tj2Zud7m6kqTVDauRz53FqA9zphHaj`
-* GRFT: `GBqRuitSoU3PFPBAkXMEnLdBRWXH4iDSD6RDxnQiEFjVJhWUi1UuqfV5EzosmaXgpPGE6JJQjMYhZZgWY8EJQn8jQTsuTit`
+* BTC: `19R69NNM4BAwSTcuJ8UjUCxcLBPyek9K8a`
+* ETH: `0xb3272fb4e201d737cb2ffe82c46f674363c37057`
+* LTC: `LbjuGwve9PwfSSkA4VZBANzuFNDfBc17Wx`
+* XMR: `41iFUpFHqSnSoxJEADGPTihZXTtCpJUTLiaSh19Hdp5QePmVQ8DmdxgbfqCUUHH9CPC9t2Fwnwgg8cFs18jNvKUxAi4vrhJ`
 
 Credits
 ---------
 
-* [fancoder](//github.com/fancoder) - Developper on cryptonote-universal-pool project from which current project is forked.
+* [Pranav](https://github.com/pranav130100) - Lead Developer at ReCoal.
+* [fancoder](//github.com/fancoder) - Developper on cryptonote-universal-pool project.
 
 License
 -------
